@@ -1,0 +1,118 @@
+html {
+    scroll-behavior: smooth;
+    scroll-padding-top: 50px;
+    @media screen and (prefers-reduced-motion: reduce) {
+
+        scroll-behavior: auto; /* Fall back to instant jumping */
+
+    }
+}
+
+* {
+    box-sizing: content-box;
+}
+
+body {
+    margin: 0;
+    padding: 0;
+}
+
+main {
+    display: flex;
+    flex-direction: row;
+    min-height: 100vh;
+}
+
+.hero-banner {
+    align-self: start;
+    min-width: fit-content;
+    height: -webkit-fill-available;
+
+    & img {
+        position: sticky;
+        top: 0;
+
+        height: 100vh;
+        object-fit: cover;
+    }
+}
+
+.content-container {
+
+    & .header {
+        position: sticky;
+        top: 0;
+        display: flex;
+        flex-direction: column;
+        text-align: center;
+        justify-content: center;
+        background: white;
+        z-index: 2;
+
+        & .menu {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 8px;
+            list-style: none;
+        }
+    }
+
+    section {
+        padding-inline: 4px;
+    }
+
+
+    & section > h2 {
+        display: flex;
+        justify-content: center;
+    }
+
+    & .schedule > div {
+        align-self: end;
+        padding-block-end: 24px;
+    }
+
+    & .dg-team {
+        display: flex;
+        flex-direction: column;
+
+        .djs {
+            display: flex;
+            flex-direction: row;
+            justify-content: center;
+            gap: 16px;
+            flex-wrap: wrap;
+
+
+            & .card {
+                position: relative;
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                background: #303030;
+                color: white;
+                letter-spacing: 4%;
+                border-radius: 4px;
+                overflow: hidden;
+                width: 200px;
+                padding: 12px;
+                box-shadow: 0 10px 15px -3px rgba(0, 0, 0, 0.1), 0 4px 6px -2px rgba(0, 0, 0, 0.05);
+
+                & .avatar {
+                    object-fit: cover;
+                    border-radius: 50%;
+                }
+            }
+        }
+    }
+
+    & .registration-form {
+        height: 166vh;
+
+        & iframe {
+            height: 100%;
+            width: 100%;
+        }
+    }
+}
