@@ -1,0 +1,62 @@
+{
+  "menu": [
+    {
+      "name": "Главная",
+      "href": "#home"
+    },
+    {
+      "href": "#schedule",
+      "name": "Расписание"
+    },
+    {
+      "href": "#venue",
+      "name": "Место проведения"
+    },
+    {
+      "href": "#dj-team",
+      "name": "DJ Команда"
+    },
+    {
+      "href": "#registration",
+      "name": "Регистрация"
+    }
+  ],
+  "dj": [
+    {
+      "name": "Dan Olaf",
+      "avatar": "./src/avatar-1.jpg",
+      "location": "Romania, Bucuresti",
+      "timeOfTheDay": "day"
+    },
+    {
+      "name": "Dan Olaf",
+      "avatar": "./src/avatar-2.jpg",
+      "location": "Romania, Bucuresti",
+      "timeOfTheDay": "night"
+    },
+    {
+      "name": "Dan Olaf",
+      "avatar": "./src/avatar-3.jpg",
+      "location": "Romania, Bucuresti",
+      "timeOfTheDay": "day"
+    },
+    {
+      "name": "Dan Olaf",
+      "avatar": "./src/avatar-4.jpg",
+      "location": "Romania, Bucuresti",
+      "timeOfTheDay": "night"
+    },
+    {
+      "name": "Dan Olaf",
+      "avatar": "./src/avatar-5.jpg",
+      "location": "Romania, Bucuresti",
+      "timeOfTheDay": "day"
+    },
+    {
+      "name": "Dan Olaf",
+      "avatar": "./src/avatar-6.jpg",
+      "location": "Romania, Bucuresti",
+      "timeOfTheDay": "night"
+    }
+  ]
+}
