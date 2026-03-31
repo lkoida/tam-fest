@@ -1,0 +1,18 @@
+@import "./card.css" layer(card);
+
+@layer schedule-card {
+    .schedule-card {
+        background: linear-gradient(45deg, white 95%, red 5%);
+        & .card-content {
+            display: flex;
+            flex-direction: column;
+            height: 100%;
+
+            & .registration-link {
+                align-self: center;
+                margin-block-start: auto;
+            }
+        }
+
+    }
+}

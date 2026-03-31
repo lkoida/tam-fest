@@ -1,0 +1,12 @@
+@layer banner {
+    .banner {
+        grid-row: span var(--grid-columns-span);
+        & .hero-banner-image {
+            position: sticky;
+            top: 0;
+            object-fit: cover;
+            height: 100vh;
+
+        }
+    }
+}

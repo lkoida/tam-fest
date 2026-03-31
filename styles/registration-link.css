@@ -1,0 +1,25 @@
+@layer registration-link {
+    .registration-link {
+        position: relative;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        gap: 8px;
+        height: 28px;
+        min-width: 150px;
+        max-width: fit-content;
+        padding-block: 12px;
+        padding-inline: 12px;
+        background: var(--primary-red);
+        color: var(--grayscale-white);
+        text-decoration: none;
+        border-radius: 4px;
+
+        & svg {
+            fill: white;
+            width: 20px;
+            height: 20px;
+        }
+    }
+
+}

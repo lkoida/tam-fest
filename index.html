@@ -1,52 +1,191 @@
 <!DOCTYPE html>
-<html lang="ru">
+<html lang="en">
 <head>
     <meta charset="UTF-8">
+    <title>tam-una vez marathon</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Title</title>
-    <link rel="stylesheet" href="./style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
+          rel="stylesheet">
+    <link rel="stylesheet" href="./styles/index.css">
 </head>
 <body>
-<main>
-    <section class="hero-banner">
-        <img class="hero-banner-image" src="./src/photo_2026-03-24_20-04-05.jpg" alt="">
+<main class="container">
+    <picture class="banner">
+        <img class="hero-banner-image" src="./src/photo_2026-03-24_20-04-05.jpg" alt="una vez marathon">
+    </picture>
+
+    <header class="header">
+        <menu class="menu"></menu>
+        <label class="lang-select">
+            <select class="lang-options">
+                <option value="ru">RU</option>
+                <option value="ro">RO</option>
+                <option value="en">EN</option>
+            </select>
+        </label>
+    </header>
+    <section id="home" class="content-block">
+        <h2 class="title">Home</h2>
+        <article class="content">
+            any content
+        </article>
     </section>
-    <section class="content-container">
-        <header class="header">
-            <menu class="menu"></menu>
-        </header>
-        <section id="home" style="min-height: 0"></section>
-        <section class="schedule" id="schedule">
-            <div>Добро пожаловать на самый лучший и уютный танго марафон, который окунет вас в незабываемую атмосферу
-                танца и радости.
+    <section id="schedule" class="content-block">
+        <h2 class="title secondary">Schedule</h2>
+        <article class="content schedule">
+            <div class="card schedule-card">
+                <!--some background image-->
+                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>
+                <div class="card-content">
+                    <p class="event-day-time">
+                        <time class="event-day" datetime="2026-03-28">
+                            <span class="strong">Thursday</span>, 28.03.2026
+                        </time>
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                <time datetime="2026-03-28T19:00">19.00</time>
+                                -
+                                <time datetime="2026-03-28T20:00">20:00</time>
+                            </td>
+                            <td><span class="strong">Registration</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <time datetime="2026-03-28T20:00">20.00</time>
+                                -
+                                <time datetime="2026-03-29T03:00">03.00</time>
+                            </td>
+                            <td><span class="strong">Milonga</span></td>
+                        </tr>
+                    </table>
+                    <a class="registration-link"
+                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                       target="_blank">
+                        <span>Зарегистрироваться</span>
+                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                            <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                        </svg>
+                    </a>
+
+                </div>
             </div>
-            <div class="registration">
+            <div class="card schedule-card">
+                <!--some background image-->
+                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>
+                <div class="card-content">
+                    <p class="event-day-time">
+                        <time class="event-day" datetime="2026-03-28">
+                            <span class="strong">Thursday</span>, 28.03.2026
+                        </time>
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                <time datetime="2026-03-28T19:00">19.00</time>
+                                -
+                                <time datetime="2026-03-28T20:00">20:00</time>
+                            </td>
+                            <td><span class="strong">Registration</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <time datetime="2026-03-28T20:00">20.00</time>
+                                -
+                                <time datetime="2026-03-29T03:00">03.00</time>
+                            </td>
+                            <td><span class="strong">Milonga</span></td>
+                        </tr>
+                    </table>
+                    <a class="registration-link"
+                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                       target="_blank">Зарегистрироваться</a>
 
-                <a class="registration-link"
-                   href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
-                   target="_blank">Зарегистрироваться</a>
+                </div>
             </div>
+            <div class="card schedule-card">
+                <!--some background image-->
+                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>
+                <div class="card-content">
+                    <p class="event-day-time">
+                        <time class="event-day" datetime="2026-03-28">
+                            <span class="strong">Thursday</span>, 28.03.2026
+                        </time>
+                    </p>
+                    <table>
+                        <tr>
+                            <td>
+                                <time datetime="2026-03-28T19:00">19.00</time>
+                                -
+                                <time datetime="2026-03-28T20:00">20:00</time>
+                            </td>
+                            <td><span class="strong">Registration</span></td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <time datetime="2026-03-28T20:00">20.00</time>
+                                -
+                                <time datetime="2026-03-29T03:00">03.00</time>
+                            </td>
+                            <td><span class="strong">Milonga</span></td>
+                        </tr>
+                    </table>
+                    <a class="registration-link"
+                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                       target="_blank">Зарегистрироваться</a>
 
-        </section>
-
-        <section class="dg-team" id="dj-team">
-            <h2>Dj Team</h2>
-            <div class="djs"></div>
-        </section>
-        <section class="registration" id="registration">
-            <h2>Registration</h2>
-
-            <div>
-                <a class="registration-link"
-                   href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
-                   target="_blank">Зарегистрироваться</a>
+                </div>
             </div>
-        </section>
+        </article>
     </section>
+    <section id="venue" class="content-block">
+        <h2 class="title">Venue</h2>
+        <article class="content venue">
+            <iframe class="venue-map"
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d654.7847889939744!2d27.529913578036606!3d47.183772111425434!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x40cafd0958ca8f87%3A0xa0423d033d9ba211!2sComplex%20Eos!5e1!3m2!1sen!2s!4v1774966897184!5m2!1sen!2s"
+                    width="800" height="600" style="border:0;" allowfullscreen="" loading="lazy"
+                    referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </article>
+    </section>
+    <section id="dj-team" class="content-block">
+        <h2 class="title">DJ Team</h2>
+        <article class="content djs">
+        </article>
+    </section>
+    <section id="registration" class="content-block">
+        <h2 class="title">Registration</h2>
+        <article class="content">
+            <a class="registration-link"
+               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+               target="_blank">
+                <span>Зарегистрироваться</span>
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                </svg>
+            </a>
+        </article>
+    </section>
+    <footer class="social-info">
+        <a target="_blank" href="facebook" style="color: black">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512"  width="48" height="48">
+                <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"/>
+            </svg>
+        </a>
+        <a target="_blank" href="instagramm">
+            <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="48" height="48">
+                <path d="M194.4 211.7a53.3 53.3 0 1 0 59.2 88.6 53.3 53.3 0 1 0 -59.2-88.6zm142.3-68.4c-5.2-5.2-11.5-9.3-18.4-12-18.1-7.1-57.6-6.8-83.1-6.5-4.1 0-7.9 .1-11.2 .1s-7.2 0-11.4-.1c-25.5-.3-64.8-.7-82.9 6.5-6.9 2.7-13.1 6.8-18.4 12s-9.3 11.5-12 18.4c-7.1 18.1-6.7 57.7-6.5 83.2 0 4.1 .1 7.9 .1 11.1s0 7-.1 11.1c-.2 25.5-.6 65.1 6.5 83.2 2.7 6.9 6.8 13.1 12 18.4s11.5 9.3 18.4 12c18.1 7.1 57.6 6.8 83.1 6.5 4.1 0 7.9-.1 11.2-.1s7.2 0 11.4 .1c25.5 .3 64.8 .7 82.9-6.5 6.9-2.7 13.1-6.8 18.4-12s9.3-11.5 12-18.4c7.2-18 6.8-57.4 6.5-83 0-4.2-.1-8.1-.1-11.4s0-7.1 .1-11.4c.3-25.5 .7-64.9-6.5-83-2.7-6.9-6.8-13.1-12-18.4l0 .2zm-67.1 44.5c18.1 12.1 30.6 30.9 34.9 52.2s-.2 43.5-12.3 61.6c-6 9-13.7 16.6-22.6 22.6s-19 10.1-29.6 12.2c-21.3 4.2-43.5-.2-61.6-12.3s-30.6-30.9-34.9-52.2 .2-43.5 12.2-61.6 30.9-30.6 52.2-34.9 43.5 .2 61.6 12.2l.1 0zm29.2-1.3c-3.1-2.1-5.6-5.1-7.1-8.6s-1.8-7.3-1.1-11.1 2.6-7.1 5.2-9.8 6.1-4.5 9.8-5.2 7.6-.4 11.1 1.1 6.5 3.9 8.6 7 3.2 6.8 3.2 10.6c0 2.5-.5 5-1.4 7.3s-2.4 4.4-4.1 6.2-3.9 3.2-6.2 4.2-4.8 1.5-7.3 1.5c-3.8 0-7.5-1.1-10.6-3.2l-.1 0zM448 96c0-35.3-28.7-64-64-64L64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l320 0c35.3 0 64-28.7 64-64l0-320zM357 389c-18.7 18.7-41.4 24.6-67 25.9-26.4 1.5-105.6 1.5-132 0-25.6-1.3-48.3-7.2-67-25.9s-24.6-41.4-25.8-67c-1.5-26.4-1.5-105.6 0-132 1.3-25.6 7.1-48.3 25.8-67s41.5-24.6 67-25.8c26.4-1.5 105.6-1.5 132 0 25.6 1.3 48.3 7.1 67 25.8s24.6 41.4 25.8 67c1.5 26.3 1.5 105.4 0 131.9-1.3 25.6-7.1 48.3-25.8 67l0 .1z"/>
+            </svg>
+        </a>
+    </footer>
 </main>
 
+
+<!-- this is a templates used in html generation-->
 <template id="menu-template">
-    <li><a href=""></a></li>
+    <li class="menu-item-list"><a class="menu-item" href=""></a></li>
 </template>
 
 <template id="dj-group">
@@ -54,7 +193,7 @@
 </template>
 
 <template id="dj-card">
-    <div class="card">
+    <div class="card dj-card">
         <picture class="avatar-container">
             <img class="avatar" src="" alt="">
         </picture>
@@ -64,6 +203,7 @@
         </section>
     </div>
 </template>
-<script type="module" src="./scripts/script.js"></script>
+
+<script type="module" src="scripts/script.js"></script>
 </body>
 </html>

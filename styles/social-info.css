@@ -1,0 +1,7 @@
+@layer social-info {
+    .social-info {
+        grid-row: 7;
+        grid-column: 2;
+        display: flex;
+    }
+}

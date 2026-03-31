@@ -1,0 +1,59 @@
+@layer layout {
+    :root {
+        /*colors*/
+        --primary-red: red;
+
+        --grayscale-white: white;
+        --grayscale-black: black;
+
+        /*sizes*/
+        --primary-heading: 2rem;
+        --secondary-heading: 1.5rem;
+        --sub-heading: 1.2rem;
+        --text: 1rem;
+
+        /*structure*/
+        --grid-columns-span: 7;
+    }
+
+    * {
+        box-sizing: content-box;
+    }
+
+    html {
+        scroll-behavior: smooth;
+        scroll-padding-top: 50px;
+        @media screen and (prefers-reduced-motion: reduce) {
+            scroll-behavior: auto;
+        }
+    }
+
+    body {
+        margin: 0;
+        padding: 0;
+        min-height: 100vh;
+        font-family: "Nunito", ui-system, sans-serif;
+    }
+
+    .container {
+        display: grid;
+        grid-template-columns: min-content 1fr;
+        grid-template-rows: 50px repeat(calc(var(--grid-columns-span) - 2), minmax(50px, auto)) 100px;
+
+        background-color: var(--grayscale-white);
+    }
+
+    .title {
+        font-weight: 800;
+        font-size: var(--primary-heading);
+
+        &.secondary {
+            font-weight: 700;
+            font-size: var(--secondary-heading);
+        }
+    }
+
+    .strong {
+        font-weight: 600;
+    }
+}
