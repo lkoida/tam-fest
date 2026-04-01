@@ -1,7 +1,19 @@
 @layer social-info {
     .social-info {
+        background: var(--grayscale-light-gray);
         grid-row: 7;
         grid-column: 2;
         display: flex;
+
+      & .social-link {
+          & svg {
+              fill: color-mix(in oklch increasing hue, var(--grayscale-black), var(--grayscale-white) 40%);
+          }
+      }
+
+        @media (width <=1300px) {
+            grid-row: 7;
+            grid-column: 1;
+        }
     }
 }

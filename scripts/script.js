@@ -1,8 +1,9 @@
 import settings from './settings.json' with {type: 'json'};
-import {topMenuBuild} from "./top-menu-build.js";
+import {menuBuild} from "./menu-build.js";
 import {djTeamBuild} from "./dj-team-build.js";
+import "./dialog-manager.js"
 
 
-topMenuBuild(settings.menu);
+menuBuild(settings.menu);
 djTeamBuild(settings.dj)
 

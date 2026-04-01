@@ -1,0 +1,63 @@
+@layer dialog {
+    .menu-dialog-mobile[open] {
+        &::backdrop {
+            background: radial-gradient(circle, rgba(0 0 0 / 0.2) 0%, rgba(0 0 0 / 0.7) 100%);
+        }
+        min-width: 100vw;
+        min-height: 45vh;
+        border: none;
+        background: rgba(0 0 0 / 0.8);
+        backdrop-filter: blur(2px);
+        padding: 0;
+        margin: 0;
+
+        & .action{
+            display: flex;
+            flex-direction: row;
+            justify-content: end;
+            padding-inline-end: 16px;
+            padding-block-start: 0.5rem;
+
+            & .menu-close {
+                width: var(--dialog-open-close-button);
+                aspect-ratio: 1/1;
+                border: 1px solid var(--grayscale-black);
+                border-radius: 4px;
+            }
+        }
+
+
+        & .menu {
+            &.mobile {
+                display: flex;
+                flex-direction: column;
+                gap: 4px;
+                padding-inline: 12px;
+
+                & .menu-item-list {
+                    display: flex;
+                    flex-direction: row;
+                    align-items: center;
+                    list-style: none;
+                    height: 32px;
+                    padding-inline: 1rem;
+                    border-radius: 4px;
+
+                    & .menu-item {
+                        text-decoration: none;
+                        color: var(--grayscale-white);
+                        font-size: 1.2rem;
+
+                        &:hover, &:active, &:visited, &:focus {
+                            color: var(--grayscale-white);
+                        }
+                    }
+                }
+            }
+        }
+
+    }
+
+
+}
+

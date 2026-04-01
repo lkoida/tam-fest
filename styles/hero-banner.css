@@ -1,12 +1,28 @@
 @layer banner {
     .banner {
         grid-row: span var(--grid-columns-span);
+        background: linear-gradient(to bottom, var(--grayscale-black) 55%, var(--grayscale-white));
+
         & .hero-banner-image {
             position: sticky;
             top: 0;
             object-fit: cover;
             height: 100vh;
 
+        }
+
+        @media (width <= 1300px) {
+            grid-column: 1;
+            grid-row: 1 ;
+            background: none;
+            height: 100vh;
+            width: 100vw;
+
+            & .hero-banner-image {
+                position: initial;
+                width: 100vw;
+                object-fit: cover;
+            }
         }
     }
 }

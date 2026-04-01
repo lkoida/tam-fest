@@ -5,68 +5,92 @@
 
         display: flex;
         flex-direction: row;
-        justify-content: space-between;
+        justify-content: center;
         padding-inline: 5rem;
         background-color: var(--grayscale-white);
         box-shadow: 0 2px 4px rgba(0, 0, 0, 0.05), 0 1px 2px rgba(0, 0, 0, 0.1);
         z-index: 1;
 
         & .menu {
-            align-self: start;
-            display: flex;
-            flex-direction: row;
-            gap: 16px;
-            justify-content: center;
-            align-items: start;
-            height: 48px;
-            margin: 0;
-
-            & .menu-item-list {
-                position: relative;
+            &.desktop {
+                align-self: center;
                 display: flex;
                 flex-direction: row;
-                align-items: end;
-                padding-block-end: 4px;
-                list-style: none;
-                height: -webkit-fill-available;
-                overflow: hidden;
+                gap: 16px;
+                justify-content: center;
+                align-items: start;
+                height: 48px;
+                margin: 0;
 
-                &:after {
-                    content: '';
-                    position: absolute;
-                    bottom: 0;
-                    left: 0;
-                    width: 100%;
-                    height: 2px;
-                    background: var(--primary-red);
-                    translate: -200px;
-                    transition: translate .3s ease-in-out;
-                }
+                & .menu-item-list {
+                    position: relative;
+                    display: flex;
+                    flex-direction: row;
+                    align-items: end;
+                    padding-block-end: 4px;
+                    list-style: none;
+                    height: -webkit-fill-available;
+                    overflow: hidden;
 
-                &:hover {
                     &:after {
-                        translate: 0;
+                        content: '';
+                        position: absolute;
+                        bottom: 0;
+                        left: 0;
+                        width: 100%;
+                        height: 2px;
+                        background: var(--primary-red);
+                        translate: -200px;
+                        transition: translate .3s ease-in-out;
                     }
-                }
+
+                    &:hover {
+                        &:after {
+                            translate: 0;
+                        }
+                    }
 
 
-                & .menu-item {
-                    text-decoration: none;
-                    color: var(--grayscale-black);
-
-                    &:hover, &:active, &:visited, &:focus {
+                    & .menu-item {
+                        text-decoration: none;
                         color: var(--grayscale-black);
+
+                        &:hover, &:active, &:visited, &:focus {
+                            color: var(--grayscale-black);
+                        }
                     }
                 }
             }
+
+            &.menu-invoker-mobile {
+                display: none;
+            }
         }
 
-        & .lang-select {
-            align-self: center;
-            height: 80%;
+        @media (width <= 1300px) {
+            grid-row: 1;
+            grid-column: 1;
+            justify-content: end;
+            height: fit-content;
+            padding-block: .5rem;
+            padding-inline: 1rem;
 
-            & select {
-                height: 100%;
+            & .menu {
+                &.desktop {
+                    display: none;
+                }
+
+                &.menu-invoker-mobile {
+                    display: initial;
+                    width: var(--dialog-open-close-button);
+                    aspect-ratio: 1/1;
+                    border: 1px solid var(--grayscale-black);
+                    border-radius: 4px;
+                    & .menu-invoker-mobile-icon{
+                        fill: var(--grayscale-black);
+                    }
+
+                }
             }
         }
     }

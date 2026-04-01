@@ -1,5 +1,7 @@
 @layer content-block {
     .content-block {
+        container-name: content-block;
+        container-type: inline-size;
         display: flex;
         flex-direction: column;
         align-items: center;
@@ -22,5 +24,9 @@
         &:nth-child(even) {
             background: #f5f4f4
         }
+        @media (width <=1300px) {
+            grid-column: 1;
+        }
     }
+
 }

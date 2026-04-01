@@ -28,5 +28,12 @@
             align-items: center;
             gap: 4px;
         }
+
+
+        @container content-block (width <= 640px) {
+            & .avatar-container {
+                --size: 80px;
+            }
+        }
     }
 }

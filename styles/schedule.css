@@ -1,0 +1,9 @@
+@layer schedule {
+    .schedule {
+            flex-wrap: wrap;
+        @container content-block (width <= 830px) {
+            flex-direction: column;
+            gap: 8px;
+        }
+    }
+}
