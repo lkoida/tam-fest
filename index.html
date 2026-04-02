@@ -9,137 +9,353 @@
     <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap"
           rel="stylesheet">
     <link rel="stylesheet" href="./styles/index.css">
+    <link rel="stylesheet" media="print" href="./styles/print.css"/>
 </head>
 <body>
 <main class="container">
-    <picture class="banner">
+    <picture class="banner no-print">
         <img class="hero-banner-image" src="./src/photo_2026-03-24_20-04-05.jpg" alt="una vez marathon">
     </picture>
 
-    <header class="header">
-        <menu class="menu desktop"></menu>
-        <button class="menu menu-invoker-mobile">
-            <svg xmlns="http://www.w3.org/2000/svg" class="menu-invoker-mobile-icon" viewBox="0 0 448 512">
+    <header class="header no-print">
+        <menu class="menu desktop no-print"></menu>
+        <button class="menu menu-invoker-mobile no-print" aria-label="Open menu">
+            <svg xmlns="http://www.w3.org/2000/svg" aria-hidden="true" class="menu-invoker-mobile-icon" viewBox="0 0 448 512">
                 <path d="M0 96C0 78.3 14.3 64 32 64l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 128C14.3 128 0 113.7 0 96zM0 256c0-17.7 14.3-32 32-32l384 0c17.7 0 32 14.3 32 32s-14.3 32-32 32L32 288c-17.7 0-32-14.3-32-32zM448 416c0 17.7-14.3 32-32 32L32 448c-17.7 0-32-14.3-32-32s14.3-32 32-32l384 0c17.7 0 32 14.3 32 32z"/>
             </svg>
         </button>
     </header>
-    <section id="home" class="content-block">
+    <section id="home" class="content-block no-print">
         <h2 class="title">Home</h2>
         <article class="content">
             any content
         </article>
     </section>
-    <section id="schedule" class="content-block">
-        <h2 class="title secondary">Schedule</h2>
+    <section id="schedule" class="content-block printable">
+        <div class="section-title"><h2 class="title secondary">Schedule</h2>
+            <button class="print-button no-print" aria-label="Print Schedule">
+                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" aria-hidden="true">
+                    <path d="M64 64C64 28.7 92.7 0 128 0L341.5 0c17 0 33.3 6.7 45.3 18.7l42.5 42.5c12 12 18.7 28.3 18.7 45.3l0 37.5-384 0 0-80zM0 256c0-35.3 28.7-64 64-64l384 0c35.3 0 64 28.7 64 64l0 96c0 17.7-14.3 32-32 32l-32 0 0 64c0 35.3-28.7 64-64 64l-256 0c-35.3 0-64-28.7-64-64l0-64-32 0c-17.7 0-32-14.3-32-32l0-96zM128 416l0 32 256 0 0-96-256 0 0 64zM456 272a24 24 0 1 0 -48 0 24 24 0 1 0 48 0z"/>
+                </svg>
+            </button>
+        </div>
         <article class="content schedule">
-            <div class="card schedule-card">
-                <!--some background image-->
-                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>
-                <div class="card-content">
-                    <p class="event-day-time">
-                        <time class="event-day" datetime="2026-03-28">
-                            <span class="strong">Thursday</span>, 28.03.2026
-                        </time>
-                    </p>
-                    <table>
-                        <tr>
-                            <td>
-                                <time datetime="2026-03-28T19:00">19.00</time>
-                                -
-                                <time datetime="2026-03-28T20:00">20:00</time>
-                            </td>
-                            <td><span class="strong">Registration</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="2026-03-28T20:00">20.00</time>
-                                -
-                                <time datetime="2026-03-29T03:00">03.00</time>
-                            </td>
-                            <td><span class="strong">Milonga</span></td>
-                        </tr>
-                    </table>
-                    <a class="registration-link"
-                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
-                       target="_blank">
-                        <span>Зарегистрироваться</span>
-                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
-                            <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
-                        </svg>
-                    </a>
+            <div class="event-day-block">
+                <h3 class="title tertiary">Thursday, 28.04.2026</h3>
+                <div class="cards">
+                    <div class="card schedule-card day">
+                        <h3 class="event-title">Day Milonga <span class="title-name">Welcome</span></h3>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T19:00">12.00</time>
+                                        -
+                                        <time datetime="2026-03-28T20:00">13:00</time>
+                                    </td>
+                                    <td><span class="strong">Registration</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T20:00">13.00</time>
+                                        -
+                                        <time datetime="2026-03-29T03:00">18.00</time>
+                                    </td>
+                                    <td><span class="strong">Milonga</span></td>
+                                </tr>
+                            </table>
+                            <a class="registration-link"
+                               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                               target="_blank">
+                                <span>Зарегистрироваться</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                                </svg>
+                            </a>
 
+                        </div>
+                    </div>
+                    <div class="card schedule-card night">
+                        <h3 class="event-title">Night Milonga <span class="title-name">Welcome</span></h3>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T19:00">18.00</time>
+                                        -
+                                        <time datetime="2026-03-28T20:00">19:00</time>
+                                    </td>
+                                    <td><span class="strong">Registration</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T20:00">19.00</time>
+                                        -
+                                        <time datetime="2026-03-29T03:00">03.00</time>
+                                    </td>
+                                    <td><span class="strong">Milonga</span></td>
+                                </tr>
+                            </table>
+                            <a class="registration-link"
+                               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                               target="_blank">
+                                <span>Зарегистрироваться</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card schedule-card">
-                <!--some background image-->
-                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>
-                <div class="card-content">
-                    <p class="event-day-time">
-                        <time class="event-day" datetime="2026-03-28">
-                            <span class="strong">Thursday</span>, 28.03.2026
-                        </time>
-                    </p>
-                    <table>
-                        <tr>
-                            <td>
-                                <time datetime="2026-03-28T19:00">19.00</time>
-                                -
-                                <time datetime="2026-03-28T20:00">20:00</time>
-                            </td>
-                            <td><span class="strong">Registration</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="2026-03-28T20:00">20.00</time>
-                                -
-                                <time datetime="2026-03-29T03:00">03.00</time>
-                            </td>
-                            <td><span class="strong">Milonga</span></td>
-                        </tr>
-                    </table>
-                    <a class="registration-link"
-                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
-                       target="_blank">Зарегистрироваться</a>
+            <div class="event-day-block">
+                <h3 class="title tertiary">Friday, 29.04.2026</h3>
+                <div class="cards">
+                    <div class="card schedule-card night">
+                        <h3 class="event-title">Night Milonga <span class="title-name">Welcome</span></h3>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T19:00">12.00</time>
+                                        -
+                                        <time datetime="2026-03-28T20:00">13:00</time>
+                                    </td>
+                                    <td><span class="strong">Registration</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T20:00">13.00</time>
+                                        -
+                                        <time datetime="2026-03-29T03:00">18.00</time>
+                                    </td>
+                                    <td><span class="strong">Milonga</span></td>
+                                </tr>
+                            </table>
+                            <a class="registration-link"
+                               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                               target="_blank">
+                                <span>Зарегистрироваться</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                                </svg>
+                            </a>
 
+                        </div>
+                    </div>
+                    <div class="card schedule-card day">
+                        <h3 class="event-title">Day Milonga <span class="title-name">Welcome</span></h3>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T19:00">18.00</time>
+                                        -
+                                        <time datetime="2026-03-28T20:00">19:00</time>
+                                    </td>
+                                    <td><span class="strong">Registration</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T20:00">19.00</time>
+                                        -
+                                        <time datetime="2026-03-29T03:00">03.00</time>
+                                    </td>
+                                    <td><span class="strong">Milonga</span></td>
+                                </tr>
+                            </table>
+                            <a class="registration-link"
+                               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                               target="_blank">
+                                <span>Зарегистрироваться</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
-            <div class="card schedule-card">
-                <!--some background image-->
-                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>
-                <div class="card-content">
-                    <p class="event-day-time">
-                        <time class="event-day" datetime="2026-03-28">
-                            <span class="strong">Thursday</span>, 28.03.2026
-                        </time>
-                    </p>
-                    <table>
-                        <tr>
-                            <td>
-                                <time datetime="2026-03-28T19:00">19.00</time>
-                                -
-                                <time datetime="2026-03-28T20:00">20:00</time>
-                            </td>
-                            <td><span class="strong">Registration</span></td>
-                        </tr>
-                        <tr>
-                            <td>
-                                <time datetime="2026-03-28T20:00">20.00</time>
-                                -
-                                <time datetime="2026-03-29T03:00">03.00</time>
-                            </td>
-                            <td><span class="strong">Milonga</span></td>
-                        </tr>
-                    </table>
-                    <a class="registration-link"
-                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
-                       target="_blank">Зарегистрироваться</a>
+            <div class="event-day-block">
+                <h3 class="title tertiary">Saturday, 30.04.2026</h3>
+                <div class="cards">
+                    <div class="card schedule-card day">
+                        <h3 class="event-title">Day Milonga <span class="title-name">Welcome</span></h3>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T19:00">12.00</time>
+                                        -
+                                        <time datetime="2026-03-28T20:00">13:00</time>
+                                    </td>
+                                    <td><span class="strong">Registration</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T20:00">13.00</time>
+                                        -
+                                        <time datetime="2026-03-29T03:00">18.00</time>
+                                    </td>
+                                    <td><span class="strong">Milonga</span></td>
+                                </tr>
+                            </table>
+                            <a class="registration-link"
+                               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                               target="_blank">
+                                <span>Зарегистрироваться</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                                </svg>
+                            </a>
 
+                        </div>
+                    </div>
+                    <div class="card schedule-card night">
+                        <h3 class="event-title">Night Milonga <span class="title-name">Welcome</span></h3>
+                        <div class="card-content">
+                            <table>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T19:00">18.00</time>
+                                        -
+                                        <time datetime="2026-03-28T20:00">19:00</time>
+                                    </td>
+                                    <td><span class="strong">Registration</span></td>
+                                </tr>
+                                <tr>
+                                    <td>
+                                        <time datetime="2026-03-28T20:00">19.00</time>
+                                        -
+                                        <time datetime="2026-03-29T03:00">03.00</time>
+                                    </td>
+                                    <td><span class="strong">Milonga</span></td>
+                                </tr>
+                            </table>
+                            <a class="registration-link"
+                               href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"
+                               target="_blank">
+                                <span>Зарегистрироваться</span>
+                                <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">
+                                    <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>
+                                </svg>
+                            </a>
+
+                        </div>
+                    </div>
                 </div>
             </div>
+            <!--region separate cards-->
+            <!--            <div class="card schedule-card">-->
+            <!--                &lt;!&ndash;some background image&ndash;&gt;-->
+            <!--                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>-->
+            <!--                <div class="card-content">-->
+            <!--                    <p class="event-day-time">-->
+            <!--                        <time class="event-day" datetime="2026-03-28">-->
+            <!--                            <span class="strong">Thursday</span>, 28.03.2026-->
+            <!--                        </time>-->
+            <!--                    </p>-->
+            <!--                    <table>-->
+            <!--                        <tr>-->
+            <!--                            <td>-->
+            <!--                                <time datetime="2026-03-28T19:00">19.00</time>-->
+            <!--                                - -->
+            <!--                                <time datetime="2026-03-28T20:00">20:00</time>-->
+            <!--                            </td>-->
+            <!--                            <td><span class="strong">Registration</span></td>-->
+            <!--                        </tr>-->
+            <!--                        <tr>-->
+            <!--                            <td>-->
+            <!--                                <time datetime="2026-03-28T20:00">20.00</time>-->
+            <!--                                - -->
+            <!--                                <time datetime="2026-03-29T03:00">03.00</time>-->
+            <!--                            </td>-->
+            <!--                            <td><span class="strong">Milonga</span></td>-->
+            <!--                        </tr>-->
+            <!--                    </table>-->
+            <!--                    <a class="registration-link"-->
+            <!--                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"-->
+            <!--                       target="_blank">-->
+            <!--                        <span>Зарегистрироваться</span>-->
+            <!--                        <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 640 640" aria-hidden="true">-->
+            <!--                            <path d="M384 64C366.3 64 352 78.3 352 96C352 113.7 366.3 128 384 128L466.7 128L265.3 329.4C252.8 341.9 252.8 362.2 265.3 374.7C277.8 387.2 298.1 387.2 310.6 374.7L512 173.3L512 256C512 273.7 526.3 288 544 288C561.7 288 576 273.7 576 256L576 96C576 78.3 561.7 64 544 64L384 64zM144 160C99.8 160 64 195.8 64 240L64 496C64 540.2 99.8 576 144 576L400 576C444.2 576 480 540.2 480 496L480 416C480 398.3 465.7 384 448 384C430.3 384 416 398.3 416 416L416 496C416 504.8 408.8 512 400 512L144 512C135.2 512 128 504.8 128 496L128 240C128 231.2 135.2 224 144 224L224 224C241.7 224 256 209.7 256 192C256 174.3 241.7 160 224 160L144 160z"/>-->
+            <!--                        </svg>-->
+            <!--                    </a>-->
+
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div class="card schedule-card">-->
+            <!--                &lt;!&ndash;some background image&ndash;&gt;-->
+            <!--                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>-->
+            <!--                <div class="card-content">-->
+            <!--                    <p class="event-day-time">-->
+            <!--                        <time class="event-day" datetime="2026-03-28">-->
+            <!--                            <span class="strong">Thursday</span>, 28.03.2026-->
+            <!--                        </time>-->
+            <!--                    </p>-->
+            <!--                    <table>-->
+            <!--                        <tr>-->
+            <!--                            <td>-->
+            <!--                                <time datetime="2026-03-28T19:00">19.00</time>-->
+            <!--                                - -->
+            <!--                                <time datetime="2026-03-28T20:00">20:00</time>-->
+            <!--                            </td>-->
+            <!--                            <td><span class="strong">Registration</span></td>-->
+            <!--                        </tr>-->
+            <!--                        <tr>-->
+            <!--                            <td>-->
+            <!--                                <time datetime="2026-03-28T20:00">20.00</time>-->
+            <!--                                - -->
+            <!--                                <time datetime="2026-03-29T03:00">03.00</time>-->
+            <!--                            </td>-->
+            <!--                            <td><span class="strong">Milonga</span></td>-->
+            <!--                        </tr>-->
+            <!--                    </table>-->
+            <!--                    <a class="registration-link"-->
+            <!--                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"-->
+            <!--                       target="_blank">Зарегистрироваться</a>-->
+
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--            <div class="card schedule-card">-->
+            <!--                &lt;!&ndash;some background image&ndash;&gt;-->
+            <!--                <h3 class="event-title">Milonga <span class="title-name">Welcome</span></h3>-->
+            <!--                <div class="card-content">-->
+            <!--                    <p class="event-day-time">-->
+            <!--                        <time class="event-day" datetime="2026-03-28">-->
+            <!--                            <span class="strong">Thursday</span>, 28.03.2026-->
+            <!--                        </time>-->
+            <!--                    </p>-->
+            <!--                    <table>-->
+            <!--                        <tr>-->
+            <!--                            <td>-->
+            <!--                                <time datetime="2026-03-28T19:00">19.00</time>-->
+            <!--                                - -->
+            <!--                                <time datetime="2026-03-28T20:00">20:00</time>-->
+            <!--                            </td>-->
+            <!--                            <td><span class="strong">Registration</span></td>-->
+            <!--                        </tr>-->
+            <!--                        <tr>-->
+            <!--                            <td>-->
+            <!--                                <time datetime="2026-03-28T20:00">20.00</time>-->
+            <!--                                - -->
+            <!--                                <time datetime="2026-03-29T03:00">03.00</time>-->
+            <!--                            </td>-->
+            <!--                            <td><span class="strong">Milonga</span></td>-->
+            <!--                        </tr>-->
+            <!--                    </table>-->
+            <!--                    <a class="registration-link"-->
+            <!--                       href="https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header"-->
+            <!--                       target="_blank">Зарегистрироваться</a>-->
+
+            <!--                </div>-->
+            <!--            </div>-->
+            <!--endregion-->
         </article>
     </section>
-    <section id="venue" class="content-block">
+    <section id="venue" class="content-block no-print">
         <h2 class="title">Venue</h2>
         <article class="content venue">
             <iframe class="venue-map"
@@ -148,11 +364,11 @@
                     referrerpolicy="no-referrer-when-downgrade"></iframe>
         </article>
     </section>
-    <section id="dj-team" class="content-block">
+    <section id="dj-team" class="content-block no-print">
         <h2 class="title">DJ Team</h2>
         <article class="content djs"></article>
     </section>
-    <section id="registration" class="content-block">
+    <section id="registration" class="content-block no-print">
         <h2 class="title">Registration</h2>
         <article class="content">
             <a class="registration-link"
@@ -165,7 +381,7 @@
             </a>
         </article>
     </section>
-    <footer class="content-block social-info">
+    <footer class="content-block social-info no-print">
         <a class="social-link" target="_blank" href="facebook" style="color: black">
             <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 448 512" width="48" height="48">
                 <path d="M64 32C28.7 32 0 60.7 0 96L0 416c0 35.3 28.7 64 64 64l98.2 0 0-145.8-52.8 0 0-78.2 52.8 0 0-33.7c0-87.1 39.4-127.5 125-127.5 16.2 0 44.2 3.2 55.7 6.4l0 70.8c-6-.6-16.5-1-29.6-1-42 0-58.2 15.9-58.2 57.2l0 27.8 83.6 0-14.4 78.2-69.3 0 0 145.8 129 0c35.3 0 64-28.7 64-64l0-320c0-35.3-28.7-64-64-64L64 32z"/>

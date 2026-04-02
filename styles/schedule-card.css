@@ -2,7 +2,10 @@
 
 @layer schedule-card {
     .schedule-card {
-        background: linear-gradient(45deg, white 95%, red 5%);
+        width: 40cqw;
+        aspect-ratio: 16 / 9;
+        background: linear-gradient(45deg, var(--grayscale-white) 95%, var(--primary-red) 5%);
+
         & .card-content {
             display: flex;
             flex-direction: column;
@@ -12,6 +15,18 @@
                 align-self: center;
                 margin-block-start: auto;
             }
+        }
+
+        &.night {
+            background: linear-gradient(45deg,
+            color-mix(in oklch longer hue, var(--grayscale-black), var(--grayscale-white) 15%) 95%,
+            var(--primary-red) 5%);
+            color: var(--grayscale-white)
+        }
+
+
+        @container content-block (width <= 830px) {
+                width: 100cqw;
         }
     }
 }

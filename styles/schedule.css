@@ -1,9 +1,35 @@
 @layer schedule {
     .schedule {
+        flex-direction: column;
             flex-wrap: wrap;
+
+        & .event-day-block {
+            display: flex;
+            flex-direction: column;
+            gap: 16px;
+
+            &:nth-of-type(even) {
+                 & .title {
+                     text-align: end;
+                 }
+            }
+            & .cards {
+               display: flex;
+                flex-direction: row;
+                gap: 8px;
+            }
+        }
+
         @container content-block (width <= 830px) {
             flex-direction: column;
             gap: 8px;
+
+
+            & .event-day-block {
+                & .cards {
+                    flex-direction: column;
+                }
+            }
         }
     }
 }

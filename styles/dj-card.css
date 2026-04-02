@@ -30,9 +30,9 @@
         }
 
 
-        @container content-block (width <= 640px) {
+        @container content-block (width <= 830px) {
             & .avatar-container {
-                --size: 80px;
+                --size: 35cqw;
             }
         }
     }

@@ -67,6 +67,11 @@
             font-weight: 700;
             font-size: var(--secondary-heading);
         }
+
+        &.tertiary {
+            font-weight: 700;
+            font-size: var(--sub-heading);
+        }
     }
 
     .strong {

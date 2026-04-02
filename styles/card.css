@@ -1,5 +1,7 @@
 @layer card {
     .card {
+        container-name: card;
+        container-type: inline-size;
         position: relative;
         display: flex;
         flex-direction: column;
@@ -16,7 +18,8 @@
                 0 10px 10px -5px rgba(0, 0, 0, 0.04);
 
 
-        @container content-block (width <= 640px) {
+        @container content-block (width <= 830px) {
+            width: 100cqw;
             flex-direction: row;
             aspect-ratio: 9/3;
             justify-content: center;

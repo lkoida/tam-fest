@@ -7,3 +7,7 @@ import "./dialog-manager.js"
 menuBuild(settings.menu);
 djTeamBuild(settings.dj)
 
+const button = document.querySelector('.print-button');
+button.addEventListener('click', () => {
+   window.print()
+})

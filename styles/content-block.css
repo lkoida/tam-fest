@@ -11,6 +11,22 @@
         padding-block-end: 48px;
         min-height: 150px;
 
+        & .section-title {
+            width: 100cqw;
+            display: flex;
+            flex-direction: row;
+            align-items: center;
+
+            & .print-button {
+                display: flex;
+                justify-content: center;
+                align-items: center;
+                width: 24px;
+                padding: 4px;
+                aspect-ratio: 1/1;
+            }
+        }
+
         & .content {
             display: flex;
             flex-direction: row;
