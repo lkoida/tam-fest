@@ -27,7 +27,7 @@
 
     html {
         scroll-behavior: smooth;
-        scroll-padding-top: 50px;
+        scroll-padding-top: 100px;
         background: var(--grayscale-black);
         @media screen and (prefers-reduced-motion: reduce) {
             scroll-behavior: auto;

@@ -20,6 +20,6 @@ export function djTeamBuild(djTeam) {
         name.textContent = dj.name
         location.textContent = dj.location
 
-    djContainer.appendChild(card)
+        djContainer.appendChild(card)
     }
 }

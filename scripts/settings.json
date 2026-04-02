@@ -58,5 +58,43 @@
       "location": "Romania, Bucuresti",
       "timeOfTheDay": "night"
     }
+  ],
+  "schedule": [
+    {
+      "name": "Milonga Welcome",
+      "eventDate": "2026-03-28T00:00",
+      "eventRegistrationLabel": "Registration",
+      "eventLabel": "Milonga",
+      "eventRegistrationStart": "2026-03-28T19:00",
+      "eventRegistrationEnd": "2026-03-28T20:00",
+      "eventStart": "2026-03-28T20:00",
+      "eventEnd": "2026-04-28T03:00",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header",
+      "registrationLinkLabel": "Зарегистрироваться"
+    },
+    {
+      "name": "Milonga Welcome",
+      "eventDate": "2026-03-28",
+      "eventRegistrationLabel": "Registration",
+      "eventLabel": "Milonga",
+      "eventRegistrationStart": "2026-03-28T19:00",
+      "eventRegistrationEnd": "2026-03-28T20:00",
+      "eventStart": "2026-03-28T20:00",
+      "eventEnd": "2026-04-28T03:00",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header",
+      "registrationLinkLabel": "Зарегистрироваться"
+    },
+    {
+      "name": "Milonga Welcome",
+      "eventDate": "2026-03-28",
+      "eventRegistrationLabel": "Registration",
+      "eventLabel": "Milonga",
+      "eventRegistrationStart": "2026-03-28T19:00",
+      "eventRegistrationEnd": "2026-03-28T20:00",
+      "eventStart": "2026-03-28T20:00",
+      "eventEnd": "2026-04-28T03:00",
+      "registrationLink": "https://docs.google.com/forms/d/e/1FAIpQLSfApWGCC_BduoP8u1DqqrGhymY7cDQ-GyzcyqfneAbmnGBkUg/viewform?usp=header",
+      "registrationLinkLabel": "Зарегистрироваться"
+    }
   ]
 }
